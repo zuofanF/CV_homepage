@@ -1,70 +1,138 @@
+/*----------Colors
+#2B2D42 - dark blue
+#EF233C - red
+-------------*/
+
+/* ---------------Global styles------------------------ */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
-    background: #fff;
 }
 
-nav ul {
-    list-style-type: none; /* 移除列表标记 */
-    padding: 0;
-    background-color: #eee;
+h1, h2 {
+    font-family: 'Times New Roman', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+h3 {
     margin: 0;
-    text-align: center; /* 居中导航文本 */
-    border-bottom: 1px solid #ccc;
 }
 
-nav ul li {
-    display: inline-block; /* 修改为内联块元素以横向排列 */
-    margin-right: 20px; /* 间隔 */
-}
-
-nav ul li a {
-    text-decoration: none; /* 移除下划线 */
-    color: black; /* 链接颜色 */
-    font-weight: bold; /* 字体加粗 */
-    padding: 10px; /* 增加填充，使链接更易点击 */
-}
-
-nav ul li a:hover {
-    background-color: #ddd; /* 鼠标悬停时的背景色 */
-}
-
-header {
+/* ---------------Navigation------------------------ */
+nav {
     text-align: center;
-    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
 }
 
-header h1 {
-    margin-top: 10px;
-    font-size: 2em;
-}
-
-header h2, header h3 {
-    color: #333;
-    margin: 5px 0;
-}
-
-.social-media a {
-    margin-right: 10px;
+nav a {
+    display: inline-block;
+    margin: 5px;
     text-decoration: none;
-    color: #0077b5; /* LinkedIn blue color */
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #2B2D42;
 }
 
-#bio {
+@media (min-width:440px) {
+    nav a {
+        margin: 14px;
+        font-size: 16px;
+    }
+}
+/* ---------------Header Only------------------------ */
+header {
+    position: relative;
+    padding-top: 50px;
+    text-align: left;
+    background-color: #2B2D42;
+    color: #8D99AE;
+}
+
+header h1, header h2 {
+    color: #EDF2F4;
+}
+
+.content-wrap {
     display: flex;
     align-items: center;
-    padding: 20px;
-    border-top: 1px solid #ccc;
+    flex-direction: column; /*竖着排列*/
+    margin: 0 auto;
+    padding: 60px 50px;
+    max-width: 1000px;
+    overflow: hidden;
 }
 
-#bio img {
+@media (min-width: 935px) {
+    .content-wrap {
+        flex-direction: row;
+    }
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
-    width: 200px; /* Adjust the size as needed */
+    margin-left: auto;
+    margin-right: 0;
 }
 
-#bio p {
-    flex: 1;
-    line-height: 1.6;
+@media (min-width: 440px) {
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 935px) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* ---------------Work------------------------ */
+.work-experience {
+    /* font-family: 'Times New Roman', cursive;
+    font-weight: 400; */
+    padding-top: 40px;
+    background-color: #EDF2F4;
+}
+
+.work-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+.job-wrapper {
+    display: block;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 935px) {
+    .job-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        column-gap: 30px;
+    }
+}
+
+@media (min-width: 935px) {
+    .job-description p:first-of-type {
+        margin-top: 0;
+    }
 }
