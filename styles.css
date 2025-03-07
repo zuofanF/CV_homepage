@@ -136,3 +136,50 @@ header h1, header h2 {
         margin-top: 0;
     }
 }
+
+
+/* --------------- Education & My Projects ------------------------ */
+.education, .projects {
+    padding: 40px 0;
+    background-color: #EDF2F4; /* 统一背景色 */
+}
+
+.education-wrapper, .projects-wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 950px;
+}
+
+.education h2, .projects h2 {
+    font-size: 30px; /* 增大标题字体 */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.education-item, .project-item {
+    padding-bottom: 20px;
+}
+
+.education-item h3, .project-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.education-item p, .project-item p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* 统一 Work Experience 和 Education 的标题样式 */
+.work-wrapper h2,
+.education-wrapper h2,
+.projects-wrapper h2 {
+    font-size: 30px; /* 统一字体大小 */
+    font-weight: bold; /* 统一加粗 */
+    text-align: left; /* 左对齐 */
+    margin-bottom: 20px; /* 统一底部间距 */
+}
+
